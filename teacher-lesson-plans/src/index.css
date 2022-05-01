@@ -11,3 +11,93 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input, button {
+  appearance: none;
+  background: none;
+  border: none;
+  background: none;
+}
+
+.App {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: lightgray;
+}
+
+form {
+  display: block;
+  position: relative;
+}
+
+form:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -10px;
+  bottom: -10px;
+  right: -5px;
+  left: -5px;
+  z-index: 1;
+}
+
+form.form-inner {
+  position: relative;
+  display: block;
+  background-color: white;
+  padding: 25px;
+  z-index: 2;
+}
+
+form.form-inner h3 {
+  color: black;
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+
+form.form-inner.form-group {
+  display: block;
+  color: black;
+  width: 350;
+  margin-bottom: 15px;
+}
+
+.form-inner .form-group label {
+  display: block;
+  color: black;
+  font-size: 12px;
+  margin-bottom: 5px;
+  transition: 0.5s;
+}
+
+.form-inner .form-group:focus-within label {
+  color: purple;
+}
+
+.form-inner .form-group input {
+  display: block;
+  width: 100%;
+  padding: 15px 15px;
+  background-color: white;
+  border-radius: 8px;
+  transition: 0.5s;
+}
+
+form .form-inner .form-group input:focus {
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+form .form-inner input[type="submit"] {
+  display: inline-block;
+  padding: 15px 15px;
+  border-radius: 10px;
+}

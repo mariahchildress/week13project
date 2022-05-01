@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import LoginForm from './components/LoginForm';
+import './App.css';
+import Navbar from './components/Navbar';
 
 function App() {
   const adminUser = {
@@ -21,6 +23,7 @@ function App() {
       });
     } else {
       console.log('Details do not match.');
+      setError('Details do not match.');
     }
   }
 
@@ -38,6 +41,7 @@ function App() {
       ) : (
         <LoginForm Login={Login} error={error}/>
       )}
+      <Navbar />
     </div>
   );
 }
